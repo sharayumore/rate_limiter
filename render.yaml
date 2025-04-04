@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: rate-limiter-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: REDIS_URL
+        value: YOUR_RENDER_REDIS_URL

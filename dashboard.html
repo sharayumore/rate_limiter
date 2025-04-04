@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rate Limiter Dashboard</title>
+    <style>
+        body { font-family: Arial; margin: 30px; }
+        table { border-collapse: collapse; width: 50%; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h2>Rate Limiter Dashboard</h2>
+    <table>
+        <tr><th>IP</th><th>Requests in Window</th></tr>
+        {% for ip, count in data.items() %}
+        <tr><td>{{ ip }}</td><td>{{ count }}</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
